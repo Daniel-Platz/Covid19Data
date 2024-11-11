@@ -19,18 +19,34 @@ public class Covid19Data {
         this.dato = dato;
     }
 
+    public String getRegion() {
+        return region;
+    }
+
+    public String getAldersgruppe() {
+        return aldersgruppe;
+    }
+    public int getBekræftedeTilfælde() {
+        return bekræftedeTilfælde;
+
+    } public int getDøde() {
+        return døde;
+
+    } public int getIndlagtePåIntensiv() {
+        return indlagtePåIntensiv;
+
+    } public int getIndlagte() {
+        return indlagte;
+    }
+
+    public String getDato() {
+        return dato;
+    }
+
+
     @Override
     public String toString() {
-        return String.format(
-                "Covid-19 Data:\n" +
-                        "  Region                   : %s\n" +
-                        "  Aldersgruppe             : %s\n" +
-                        "  Bekræftede tilfælde      : %d\n" +
-                        "  Døde                     : %d\n" +
-                        "  Indlagte på intensiv     : %d\n" +
-                        "  Indlagte                 : %d\n" +
-                        "  Dato                     : %s\n",
-                region, aldersgruppe, bekræftedeTilfælde, døde, indlagtePåIntensiv, indlagte, dato
-        );
+        return String.format("%-15s | %-12s | %,-20d | %-5d | %-17d | %-8d | %s",
+                region, aldersgruppe, bekræftedeTilfælde, døde, indlagtePåIntensiv, indlagte, dato);
     }
 }
